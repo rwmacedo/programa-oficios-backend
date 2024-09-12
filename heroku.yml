@@ -1,2 +1,11 @@
-pack:
+pack:build:
+  docker:
+    web: Dockerfile
+  config:
+    SQL_CONNECTION_STRING: ${SQL_CONNECTION_STRING}
+    AZURE_BLOB_STORAGE: ${AZURE_BLOB_STORAGE}
+
+run:
+  web: dotnet ProgramaOficios.API.dll
+
   builder: microsoft/dotnet:8.0-x64
