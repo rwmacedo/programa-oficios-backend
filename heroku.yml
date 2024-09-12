@@ -5,6 +5,3 @@ build:
 run:
   web: dotnet ProgramaOficios.API.dll
 
-config:
-  SQL_CONNECTION_STRING: ${SQL_CONNECTION_STRING}
-  AZURE_BLOB_STORAGE: ${AZURE_BLOB_STORAGE}
