@@ -1,6 +1,6 @@
 build:
   docker:
-    web: Dockerfile  # O Dockerfile está na raiz do projeto
+    web: ProgramaOficios.API/Dockerfile  # O Dockerfile está na raiz do projeto
 
 run:
   web: dotnet ProgramaOficios.API.dll
