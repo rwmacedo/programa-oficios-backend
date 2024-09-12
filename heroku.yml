@@ -1,6 +1,6 @@
 build:
   docker:
-    web: Dockerfile
+    web: ./ProgramaOficios.API/Dockerfile  # Especifique o caminho correto do Dockerfile dentro da pasta API
 
 run:
-  web: dotnet ProgramaOficios.API.dll
+  web: dotnet ProgramaOficios.API.dll  
