@@ -29,7 +29,7 @@ builder.Services.AddCors(options =>
             builder.WithOrigins("http://localhost:4200", "https://controle-oficios-frontend-2add7ce34be5.herokuapp.com/")  // Origem do Angular
                    .AllowAnyMethod()
                    .AllowAnyHeader()
-                   .AllowCredentials();;
+                   .AllowCredentials();
         });
 });
 
