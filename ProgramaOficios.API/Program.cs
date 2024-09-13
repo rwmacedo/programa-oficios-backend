@@ -5,6 +5,7 @@ using ProgramaOficios.Infrastructure.Context;
 using ProgramaOficios.Infrastructure.IoC;
 
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Carregar variáveis do arquivo .env
@@ -45,6 +46,9 @@ builder.Services.AddDbContext<OficioDbContext>(options =>
 builder.Services.AddSingleton(new BlobServiceClient(blobStorageConnectionString));
 
 var app = builder.Build(); // Build ocorre aqui
+
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Urls.Add($"http://*:{port}");
 
 // Configuração do middleware
 if (app.Environment.IsDevelopment())
