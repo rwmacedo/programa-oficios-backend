@@ -59,6 +59,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
+app.UseSwagger();
 
 // Usar a política de CORS correta ("AllowAngularClient")
 app.UseCors("AllowAngularClient");
