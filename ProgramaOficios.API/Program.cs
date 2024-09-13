@@ -47,7 +47,7 @@ builder.Services.AddSingleton(new BlobServiceClient(blobStorageConnectionString)
 
 var app = builder.Build(); // Build ocorre aqui
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
 app.Urls.Add($"http://*:{port}");
 
 // Configuração do middleware
@@ -56,6 +56,11 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
 }
 
 app.UseHttpsRedirection();
