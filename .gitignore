@@ -1,0 +1,32 @@
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# .NET Core files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Dependencies
+*.nuget/
+
+# Database
+*.mdf
+*.ldf
+
+# Others
+*.log
+.env
