@@ -28,8 +28,7 @@ builder.Services.AddCors(options =>
         {
             builder.WithOrigins("*")  // Origem do Angular
                    .AllowAnyMethod()
-                   .AllowAnyHeader()
-                   .AllowCredentials();
+                   .AllowAnyHeader();
         });
 });
 
