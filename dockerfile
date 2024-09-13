@@ -4,8 +4,8 @@ WORKDIR /app
 
 # Copiar os arquivos de projeto corretos
 COPY ./ProgramaOficios.API.csproj ./ProgramaOficios.API/
-COPY ProgramaOficios.Application/ProgramaOficios.Application.csproj ./ProgramaOficios.Application/
-COPY ProgramaOficios.Infrastructure/ProgramaOficios.Infrastructure.csproj ./ProgramaOficios.Infrastructure/
+#COPY ProgramaOficios.Application/ProgramaOficios.Application.csproj ./ProgramaOficios.Application/
+#COPY ProgramaOficios.Infrastructure/ProgramaOficios.Infrastructure.csproj ./ProgramaOficios.Infrastructure/
 
 # Restaure as dependências
 RUN dotnet restore ./ProgramaOficios.API/ProgramaOficios.API.csproj
