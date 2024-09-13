@@ -21,6 +21,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build-env /out .
 
+ENV ASPNETCORE_URLS=http://*:$PORT
+
 # Exponha a porta 80
 EXPOSE 80
 
@@ -28,4 +30,3 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "ProgramaOficios.API.dll"]
 #CMD ASPNETCORE_URLS="http://*:$PORT" dotnet ProgramaOficios.API.dll
 
-ENV ASPNETCORE_URLS=http://*:$PORT
