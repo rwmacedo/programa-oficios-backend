@@ -1,0 +1,7 @@
+# Mantém arquivos de texto com LF nos commits, mas usa CRLF no checkout no Windows
+* text=auto
+
+# Arquivos específicos que devem sempre usar LF (por exemplo, arquivos de configuração)
+*.sh text eol=lf
+*.yml text eol=lf
+*.json text eol=lf

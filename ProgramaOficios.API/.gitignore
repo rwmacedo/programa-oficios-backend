@@ -1,0 +1,5 @@
+# Ignorar o arquivo .env
+.env
+
+# Ignorar appsettings de desenvolvimento
+appsettings.Development.json
