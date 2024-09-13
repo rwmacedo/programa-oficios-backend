@@ -3,8 +3,8 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /app
 
 # Copiar os arquivos de projeto corretos
-COPY ./ProgramaOficios.API.csproj ./ProgramaOficios.API/
-#COPY ProgramaOficios.Application/ProgramaOficios.Application.csproj ./ProgramaOficios.Application/
+#COPY ./ProgramaOficios.API.csproj ./ProgramaOficios.API/
+COPY ProgramaOficios.Application/ProgramaOficios.Application.csproj ./ProgramaOficios.Application/
 #COPY ProgramaOficios.Infrastructure/ProgramaOficios.Infrastructure.csproj ./ProgramaOficios.Infrastructure/
 
 # Restaure as dependências
