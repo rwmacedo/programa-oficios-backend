@@ -1,6 +1,11 @@
+
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace ProgramaOficios.Application.Entities
+
+
 {
-    public class Oficio
+    [Table("oficio")]     public class Oficio
     {
         public int Id { get; set; }
 
