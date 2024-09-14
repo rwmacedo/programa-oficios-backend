@@ -68,7 +68,7 @@ app.UseAuthorization();
 app.UseSwagger();
 
 // Usar a política de CORS correta ("AllowAngularClient")
-app.UseCors("AllowAngularClient");
+app.UseCors("AllowHerokuClient");
 
 app.MapControllers();
 
