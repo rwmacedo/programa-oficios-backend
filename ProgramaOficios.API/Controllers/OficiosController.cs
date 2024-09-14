@@ -47,6 +47,12 @@ public class OficiosController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Oficio>> PostOficio(Oficio oficio)
     {
+        // Supondo que 'oficio.Data' seja o campo com problema
+     if (oficio.Data.Kind == DateTimeKind.Unspecified)
+     {
+         oficio.Data = DateTime.SpecifyKind(oficio.Data, DateTimeKind.Utc);
+     }
+
         _context.Oficios.Add(oficio);
         await _context.SaveChangesAsync();
 
@@ -61,6 +67,11 @@ public class OficiosController : ControllerBase
         {
             return BadRequest();
         }
+       // Supondo que 'oficio.Data' seja o campo com problema
+       if (oficio.Data.Kind == DateTimeKind.Unspecified)
+       {
+           oficio.Data = DateTime.SpecifyKind(oficio.Data, DateTimeKind.Utc);
+       }
 
         _context.Entry(oficio).State = EntityState.Modified;
 
