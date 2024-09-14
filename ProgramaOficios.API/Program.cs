@@ -26,7 +26,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAngularClient",
         builder =>
         {
-            builder.WithOrigins("*")  // Origem do Angular
+            builder.WithOrigins("https://controle-oficios-frontend-2add7ce34be5.herokuapp.com")  // Origem do Angular
                    .AllowAnyMethod()
                    .AllowAnyHeader();
         });
