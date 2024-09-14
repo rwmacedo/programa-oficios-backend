@@ -64,11 +64,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Usar a política de CORS correta ("AllowAngularClient")
+app.UseCors("AllowHerokuClient");
+
 app.UseAuthorization();
 app.UseSwagger();
 
-// Usar a política de CORS correta ("AllowAngularClient")
-app.UseCors("AllowHerokuClient");
+
 
 app.MapControllers();
 
