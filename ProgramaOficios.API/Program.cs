@@ -45,7 +45,13 @@ builder.Services.AddDbContext<OficioDbContext>(options =>
 // Configurar o BlobServiceClient usando o Configuration diretamente
 builder.Services.AddSingleton(new BlobServiceClient(blobStorageConnectionString));
 
-var app = builder.Build(); // Build ocorre aqui
+var app = builder.Build(); 
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<OficioDbContext>();
+    dbContext.Database.Migrate();  // Aplica as migrations
+}
 
 var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
 app.Urls.Add($"http://*:{port}");
