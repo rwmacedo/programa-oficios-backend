@@ -5,7 +5,8 @@ namespace ProgramaOficios.Application.Entities
 
 
 {
-    [Table("oficio")]     public class Oficio
+    [Table("oficio")]     
+    public class Oficio
     {
         public int Id { get; set; }
 
