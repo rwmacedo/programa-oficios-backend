@@ -23,7 +23,7 @@ builder.ConfigurarInjecaoDeDependencia();
 // Registrar CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngularClient",
+    options.AddPolicy("AllowHerokuClient",
         builder =>
         {
             builder.WithOrigins("https://controle-oficios-frontend-2add7ce34be5.herokuapp.com")  // Origem do Angular
